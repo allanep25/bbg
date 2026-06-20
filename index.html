@@ -10,69 +10,66 @@
 body{
   margin:0;
   font-family:Arial, sans-serif;
-  background:#f6f7f4;
+  background:#f7f8f4;
   color:#073b1f;
 }
 header{
-  background:#004d22;
+  background:#00451f;
   color:white;
-  padding:16px 7%;
+  padding:16px 6%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  position:sticky;
-  top:0;
-  z-index:10;
 }
-.logo{
-  font-size:28px;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:34px;
   font-weight:900;
 }
-.logo span{color:#ffd400}
+.brand img{
+  width:52px;
+}
+.brand span{color:#ffd400}
 nav a{
   color:white;
   text-decoration:none;
   margin-left:28px;
   font-weight:bold;
 }
-nav a:hover{color:#ffd400}
-
-.hero{
-  min-height:520px;
-  background:
-    linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.1)),
-    linear-gradient(135deg,#fff7cf,#a7d68a,#0b6b2c);
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  align-items:center;
-  padding:70px 7%;
-  position:relative;
-  overflow:hidden;
+.download-top{
+  background:#ffd400;
+  color:#062d17;
+  padding:12px 22px;
+  border-radius:10px;
 }
-.hero:after{
-  content:"";
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  height:120px;
-  background:linear-gradient(to top,#06451f,transparent);
+.hero{
+  min-height:670px;
+  background-image:linear-gradient(90deg,rgba(255,245,190,.88),rgba(255,255,255,.25)),url("hero-bg.png");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  padding:60px 6%;
+}
+.hero-content{
+  max-width:650px;
 }
 .hero h1{
-  font-size:64px;
-  margin:0 0 10px;
-  color:#063b1f;
+  font-size:72px;
+  margin:0 0 15px;
+  font-weight:900;
 }
 .hero h2{
-  font-size:28px;
-  margin:0 0 30px;
+  font-size:30px;
+  margin:0 0 35px;
 }
 .stats{
   display:flex;
-  gap:30px;
-  margin-bottom:30px;
+  gap:45px;
   flex-wrap:wrap;
+  margin-bottom:35px;
 }
 .stat{
   display:flex;
@@ -80,65 +77,44 @@ nav a:hover{color:#ffd400}
   gap:12px;
   font-weight:bold;
 }
-.stat .icon{
-  background:#0b7f35;
+.stat-icon{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#00843d;
   color:#ffd400;
-  padding:13px;
-  border-radius:50%;
-}
-.buttons a{
-  display:inline-block;
-  padding:16px 28px;
-  border-radius:10px;
-  margin:8px 10px 8px 0;
-  text-decoration:none;
-  font-weight:900;
-}
-.download{
-  background:#ffd400;
-  color:#073b1f;
-}
-.driver{
-  background:white;
-  color:#0b7f35;
-  border:2px solid #0b7f35;
-}
-.hero-logo{
-  text-align:center;
-  z-index:2;
-}
-.hero-logo .circle{
-  width:330px;
-  height:330px;
-  margin:auto;
-  border-radius:50%;
-  background:white;
-  border:12px solid #0b7f35;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:120px;
-  box-shadow:0 15px 40px rgba(0,0,0,.25);
+  font-size:26px;
 }
-.hero-logo h3{
-  font-size:54px;
-  margin:25px 0 0;
+.stat strong{
+  display:block;
+  font-size:28px;
+}
+.btn{
+  display:inline-block;
+  padding:18px 34px;
+  border-radius:10px;
+  text-decoration:none;
   font-weight:900;
+  margin-right:12px;
 }
-.hero-logo h3 span{color:#ffd400}
-.hero-logo p{
-  font-size:24px;
-  font-weight:bold;
+.btn-yellow{
+  background:#ffd400;
+  color:#062d17;
 }
-
+.btn-white{
+  background:white;
+  color:#006b32;
+  border:2px solid #006b32;
+}
 .section{
-  max-width:1200px;
-  margin:-40px auto 0;
-  padding:20px;
-  position:relative;
-  z-index:3;
+  max-width:1300px;
+  margin:auto;
+  padding:35px 25px;
 }
-.grid{
+.cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
@@ -147,26 +123,41 @@ nav a:hover{color:#ffd400}
   background:white;
   border-radius:16px;
   padding:28px;
-  box-shadow:0 8px 25px rgba(0,0,0,.10);
   display:flex;
   gap:20px;
+  box-shadow:0 8px 22px rgba(0,0,0,.10);
 }
-.card-icon{
-  min-width:70px;
-  height:70px;
-  background:#dff5d8;
-  color:#0b7f35;
+.icon{
+  width:74px;
+  height:74px;
   border-radius:50%;
+  background:#ddf5d7;
+  color:#006b32;
   display:flex;
   align-items:center;
   justify-content:center;
   font-size:34px;
+  flex-shrink:0;
 }
-.card h2{margin:0 0 10px}
+.card h2{
+  margin:0 0 10px;
+}
 .wide{grid-column:span 2}
+.values{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px 45px;
+}
+.values span::before{
+  content:"✅ ";
+}
+.card a{
+  color:#006b32;
+  font-weight:bold;
+}
 .safety{
-  margin-top:20px;
-  background:#004d22;
+  margin-top:22px;
+  background:#00451f;
   color:white;
   border-radius:16px;
   padding:25px;
@@ -177,32 +168,33 @@ nav a:hover{color:#ffd400}
 }
 .safety div{
   border-right:1px solid rgba(255,255,255,.2);
-  padding:10px;
 }
 .safety div:last-child{border-right:none}
 .safety b{
-  color:#ffd400;
   display:block;
-  font-size:28px;
+  color:#ffd400;
+  font-size:34px;
   margin-bottom:8px;
 }
 footer{
   background:#003916;
   color:white;
   text-align:center;
-  padding:40px 20px;
-  margin-top:40px;
+  padding:40px;
 }
 footer span{color:#ffd400}
 
-@media(max-width:850px){
+@media(max-width:900px){
   header{display:block;text-align:center}
   nav{margin-top:15px}
   nav a{display:inline-block;margin:8px}
-  .hero{grid-template-columns:1fr;text-align:center}
+  .hero{
+    min-height:600px;
+    text-align:center;
+    justify-content:center;
+  }
   .hero h1{font-size:44px}
-  .hero-logo .circle{width:240px;height:240px;font-size:90px}
-  .grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
   .wide{grid-column:span 1}
   .safety{grid-template-columns:1fr 1fr}
 }
@@ -212,48 +204,53 @@ footer span{color:#ffd400}
 <body>
 
 <header>
-  <div class="logo">🛺 BaoBao<span>Go</span></div>
+  <div class="brand">
+    <img src="baobaogo-logo.png" alt="BaoBaoGo Logo">
+    BaoBao<span>Go</span>
+  </div>
+
   <nav>
     <a href="#">Home</a>
     <a href="#about">About</a>
     <a href="#safety">Safety</a>
     <a href="#driver">Become a Driver</a>
     <a href="#support">Support</a>
+    <a class="download-top" href="#">⬇ Download App</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div>
+  <div class="hero-content">
     <h1>Your Everyday Ride</h1>
     <h2>Marawi City's Ride-Hailing Platform</h2>
 
     <div class="stats">
-      <div class="stat"><div class="icon">👥</div> Verified Drivers<br>100+</div>
-      <div class="stat"><div class="icon">🛺</div> Safe Rides<br>10,000+</div>
-      <div class="stat"><div class="icon">📍</div> Service Area<br>Marawi City</div>
+      <div class="stat">
+        <div class="stat-icon">👥</div>
+        <div>Verified Drivers<strong>100+</strong></div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-icon">🚕</div>
+        <div>Safe Rides<strong>10,000+</strong></div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-icon">📍</div>
+        <div>Service Area<strong>Marawi City</strong></div>
+      </div>
     </div>
 
-    <div class="buttons">
-      <a class="download" href="#">⬇ Download Passenger App</a>
-      <a class="driver" href="#driver">👤 Become a Driver</a>
-    </div>
-  </div>
-
-  <div class="hero-logo">
-    <div class="circle">
-    <img src="baobaogo-logo.png" alt="BaoBaoGo Logo"
-         style="width:90%;height:auto;">
-</div>
-    <h3>BaoBao<span>Go</span></h3>
-    <p>Your Everyday Ride</p>
+    <a class="btn btn-yellow" href="#">⬇ Download Passenger App</a>
+    <a class="btn btn-white" href="#driver">👤 Become a Driver</a>
   </div>
 </section>
 
 <section class="section">
+  <div class="cards">
 
-  <div class="grid">
     <div class="card" id="about">
-      <div class="card-icon">👥</div>
+      <div class="icon">👥</div>
       <div>
         <h2>About BaoBaoGo</h2>
         <p>BaoBaoGo is a transportation platform proudly founded in Marawi City, connecting passengers with verified drivers through safe, affordable, and reliable rides.</p>
@@ -261,7 +258,7 @@ footer span{color:#ffd400}
     </div>
 
     <div class="card">
-      <div class="card-icon">🎯</div>
+      <div class="icon">🎯</div>
       <div>
         <h2>Mission</h2>
         <p>To provide accessible, safe, and dependable transportation while empowering local drivers and serving communities.</p>
@@ -269,7 +266,7 @@ footer span{color:#ffd400}
     </div>
 
     <div class="card">
-      <div class="card-icon">👁</div>
+      <div class="icon">👁</div>
       <div>
         <h2>Vision</h2>
         <p>To become the leading local mobility platform in Mindanao, connecting people through innovative transportation solutions.</p>
@@ -277,15 +274,21 @@ footer span{color:#ffd400}
     </div>
 
     <div class="card wide">
-      <div class="card-icon">💎</div>
+      <div class="icon">💎</div>
       <div>
         <h2>Core Values</h2>
-        <p>✅ Safety First &nbsp;&nbsp; ✅ Integrity &nbsp;&nbsp; ✅ Community Empowerment &nbsp;&nbsp; ✅ Innovation &nbsp;&nbsp; ✅ Customer Satisfaction</p>
+        <div class="values">
+          <span>Safety First</span>
+          <span>Integrity</span>
+          <span>Community Empowerment</span>
+          <span>Innovation</span>
+          <span>Customer Satisfaction</span>
+        </div>
       </div>
     </div>
 
     <div class="card" id="support">
-      <div class="card-icon">🎧</div>
+      <div class="icon">🎧</div>
       <div>
         <h2>Support & Legal</h2>
         <p><a href="#">Privacy Policy</a></p>
@@ -293,17 +296,17 @@ footer span{color:#ffd400}
         <p><a href="#">Contact Support</a></p>
       </div>
     </div>
+
   </div>
 
   <div class="safety" id="safety">
     <div><b>🛡</b>Verified Drivers</div>
     <div><b>🚕</b>Vehicle Information</div>
     <div><b>📍</b>Real-Time Tracking</div>
-    <div><b>💬</b>Quick Chat</div>
+    <div><b>💬</b>In-App Quick Chat</div>
     <div><b>🚨</b>Emergency Support</div>
     <div><b>⭐</b>Driver Ratings</div>
   </div>
-
 </section>
 
 <footer>
