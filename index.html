@@ -47,11 +47,20 @@ nav a{
 .hero{
   min-height:670px;
   background:linear-gradient(135deg,#fff4c2,#b9e6a8,#0b6b2c);
-  background-size:cover;
-  background-position:center;
   display:flex;
+  justify-content:space-between;
   align-items:center;
   padding:60px 6%;
+}
+  .hero-logo{
+  flex:1;
+  text-align:center;
+}
+
+.hero-logo img{
+  width:550px;
+  max-width:100%;
+  filter:drop-shadow(0 15px 30px rgba(0,0,0,.25));
 }
 .hero-content{
   max-width:650px;
@@ -220,7 +229,8 @@ footer span{color:#ffd400}
 </header>
 
 <section class="hero">
-  <div class="hero-content">
+
+<div class="hero-content">
     <h1>Your Everyday Ride</h1>
     <h2>Marawi City's Ride-Hailing Platform</h2>
 
@@ -244,6 +254,11 @@ footer span{color:#ffd400}
     <a class="btn btn-yellow" href="#">⬇ Download Passenger App</a>
     <a class="btn btn-white" href="#driver">👤 Become a Driver</a>
   </div>
+
+<div class="hero-logo">
+   <img src="baobaogo-logo.png" alt="BaoBaoGo">
+</div>
+
 </section>
 
 <section class="section">
